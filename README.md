@@ -7,8 +7,8 @@ Users can register, post and answer questions, like answers, and log out.
 
 ## 🔧 Tech Stack
 
-- Python 3.x  
-- Django 4.x  
+- Python 3.12.0
+- Django 5.2 
 - Bootstrap 5 (for styling)  
 - SQLite (default Django database)
 
