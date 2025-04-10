@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Recent Questions</h2>
+{% for question in questions %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5><a href="{% url 'question_detail' question.pk %}">{{ question.title }}</a></h5>
+            <small class="text-muted">Asked by {{ question.user.username }} on {{ question.created_at|date:"Y-m-d H:i" }}</small>
+        </div>
+    </div>
+{% empty %}
+    <p>No questions have been posted yet.</p>
+{% endfor %}
+{% endblock %}
